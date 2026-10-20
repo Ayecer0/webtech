@@ -7,60 +7,59 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Перейти к основному содержимому</a>
+
     <header>
-        <div class="container">
+        <div class="container header__inner">
             <a href="#" class="logo">AQUARIM</a>
-            <nav>
+            <nav aria-label="Основная навигация">
                 <ul>
                     <li><a href="#about">О ресторане</a></li>
                     <li><a href="#menu">Меню</a></li>
                     <li><a href="#delivery">Доставка</a></li>
-                    <li><a href="#promos">Акции</a></li>
+                    <li><a href="#booking">Бронь</a></li>
                     <li><a href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
+            <a href="#" class="cart-link">
+                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"></circle><circle cx="18" cy="20" r="1.5"></circle><path d="M2 3h3l2.6 12.4a1 1 0 0 0 1 .8h9.2a1 1 0 0 0 1-.8L21 7H6"></path></svg>
+                <span class="sr-only">Корзина</span>
+            </a>
         </div>
     </header>
 
-    <main>
-        <!-- Главный экран -->
-        <section class="hero">
-            <div class="container">
-                <h1>Рыбный ресторан AQUARIM</h1>
-                <p>Откройте для себя мир изысканных вкусов с нашими рыбными деликатесами, приготовленными специально для вас</p>
-                <img src="img/shrimp.png" alt="Креветка на вилке" width="250" height="320" class="hero-img">
-                <button type="button">Меню</button>
-                <ul>
-                    <li>Свежая рыба из наших аквариумов — гарантированная свежесть</li>
-                    <li>Качественная доставка, где горячие блюда сохраняют свой вкус</li>
-                </ul>
+    <main id="main-content">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container hero__inner">
+                <div>
+                    <h1 id="hero-title">Рыбный ресторан AQUARIM</h1>
+                    <p>Откройте для себя мир изысканных вкусов с нашими рыбными деликатесами, приготовленными специально для вас</p>
+                    <a href="#menu" class="btn">Меню</a>
+                </div>
+                <img src="img/shrimp.png" alt="" width="200" height="568" class="hero__img">
             </div>
         </section>
 
-        <!-- О ресторане -->
-        <section id="about">
-            <div class="container">
-                <h2>История рыбного искушения</h2>
-                <p>Наша история началась с мечты о создании места, где каждый может насладиться непревзойденным вкусом свежей рыбы прямо у себя дома. Мы поставили перед собой задачу предложить нечто большее, чем просто блюда из рыбы — мы хотели подарить вам настоящее морское путешествие.</p>
-                <p>Мы — это место, где каждая деталь имеет значение.</p>
-                <button type="button">Узнать больше</button>
-                <figure class="about-figure">
-                    <img src="img/chef.jpg" alt="Шеф-повар ресторана AQUARIM на фоне аквариума" width="500" height="320">
+        <section id="about" class="section" aria-labelledby="about-title">
+            <div class="container two-cols">
+                <div>
+                    <h2 id="about-title">История рыбного искушения</h2>
+                    <p>Наша история началась с мечты о создании места, где каждый может насладиться непревзойденным вкусом свежей рыбы прямо у себя дома. Мы хотели подарить вам настоящее морское путешествие.</p>
+                    <p>Мы — это место, где каждая деталь имеет значение.</p>
+                </div>
+                <figure>
+                    <img src="img/chef.jpg" alt="Шеф-повар в белом кителе и колпаке на фоне аквариума" width="1000" height="667" class="photo">
                     <figcaption>Наш шеф-повар лично отбирает свежие морепродукты</figcaption>
                 </figure>
             </div>
         </section>
 
-        <!-- Меню (Блюда) -->
-        <section id="menu">
+        <section id="menu" class="section" aria-labelledby="menu-title">
             <div class="container">
-                <h2>Блюда, которые навсегда запомнятся вам</h2>
-                <article class="dish-card">
-                    <figure class="dish-figure">
-                        <img src="img/breeze.jpg" alt="Тарелка морепродуктов Морской бриз" width="300" height="300">
-                        <figcaption>Подача блюда с фирменным соусом</figcaption>
-                    </figure>
-                    <div class="dish-info">
+                <h2 id="menu-title">Блюда, которые навсегда запомнятся вам</h2>
+                <article class="card two-cols">
+                    <img src="img/breeze.jpg" alt="Тарелка морепродуктов «Морской бриз»" width="800" height="800" class="round">
+                    <div>
                         <h3>Морской бриз</h3>
                         <p>Тарелка морепродуктов, включающая сочные кусочки краба, ароматные креветки и нежные мидии, подается с фирменным соусом и свежими зелеными травами.</p>
                         <p class="price">1300 рублей / 150 г</p>
@@ -70,54 +69,73 @@
             </div>
         </section>
 
-        <!-- Секция: Доставка -->
-        <section id="delivery" class="delivery-section">
+        <section id="delivery" class="section" aria-labelledby="delivery-title">
             <div class="container">
-                <h2>Быстро, удобно, надежно — доставка по Москве и МО</h2>
-                <div class="delivery-grid">
-                    <div class="delivery-features">
-                        <div class="feature-item">
-                            <span class="feature-num">01</span>
-                            <div>
-                                <h3>Термосумки для сохранения тепла</h3>
-                                <p>Мы доставляем в специальных термосумках, чтобы сохранить температуру и свежесть блюд.</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-num">02</span>
-                            <div>
-                                <h3>Горячее и свежее</h3>
-                                <p>Ваш заказ не успеет остыть и не потеряет своего вкуса в пути.</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-num">03</span>
-                            <div>
-                                <h3>Качество как в ресторане</h3>
-                                <p>Вы получите блюда в том виде, в котором их приготовил повар.</p>
-                            </div>
-                        </div>
+                <h2 id="delivery-title">Быстро, удобно, надежно — доставка по Москве и МО</h2>
+                <div class="two-cols">
+                    <div>
+                        <h3>1. Термосумки для сохранения тепла</h3>
+                        <p>Мы доставляем в специальных термосумках, чтобы сохранить температуру и свежесть блюд.</p>
+                        <h3>2. Горячее и свежее</h3>
+                        <p>Ваш заказ не успеет остыть и не потеряет своего вкуса в пути.</p>
+                        <h3>3. Качество как в ресторане</h3>
+                        <p>Вы получите блюда в том виде, в котором их приготовил повар.</p>
                     </div>
+                    <img src="img/delivery.jpg" alt="Курьер на мотоцикле с термосумкой едет по улице" width="1456" height="816" class="photo">
                 </div>
             </div>
         </section>
 
-        <!-- Акции -->
-        <section id="promos" class="promo-section">
+        <section id="promo" class="section" aria-labelledby="promo-title">
             <div class="container">
-                <article class="promo-card">
-                    <h2>Скидка 15% на первый заказ</h2>
-                    <p>Воспользуйтесь этой прекрасной возможностью и откройте для себя мир изысканных морских деликатесов, которыми славится наш ресторан</p>
-                    <button type="button">Забрать скидку</button>
-                    <img src="img/promo-dish.jpg" alt="Рыбное филе в соусе" width="300" height="300" class="promo-img">
+                <article class="card two-cols">
+                    <div>
+                        <h2 id="promo-title">Скидка 15% на первый заказ</h2>
+                        <p>Воспользуйтесь этой прекрасной возможностью и откройте для себя мир изысканных морских деликатесов, которыми славится наш ресторан.</p>
+                        <a href="#booking" class="btn">Забрать скидку</a>
+                    </div>
+                    <img src="img/promo-dish.jpg" alt="Запечённое рыбное филе с красным соусом" width="800" height="800" class="round">
                 </article>
+            </div>
+        </section>
+
+        <section id="booking" class="section" aria-labelledby="booking-title">
+            <div class="container">
+                <h2 id="booking-title">Забронируйте свое место за лучшим столом</h2>
+                <form action="#" method="post">
+                    <div class="field">
+                        <label for="guest-name">Имя</label>
+                        <input type="text" id="guest-name" name="name" autocomplete="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="guest-phone">Телефон</label>
+                        <input type="tel" id="guest-phone" name="phone" autocomplete="tel" required>
+                    </div>
+                    <div class="field">
+                        <label for="booking-date">Дата</label>
+                        <input type="date" id="booking-date" name="date" required>
+                    </div>
+                    <div class="field">
+                        <label for="booking-time">Время</label>
+                        <input type="time" id="booking-time" name="time" required>
+                    </div>
+                    <div class="field">
+                        <label for="guests-count">Количество гостей</label>
+                        <input type="number" id="guests-count" name="guests" min="1" max="20" required>
+                    </div>
+                    <button type="submit">Забронировать</button>
+                </form>
             </div>
         </section>
     </main>
 
     <footer id="contacts">
         <div class="container">
-            <p>&copy; 2018-2026 Рыбный ресторан AQUARIM. Все права защищены.</p>
+            <h2>Контакты</h2>
+            <p><a href="tel:+79654788976">+7 (965) 478-89-76</a></p>
+            <p><a href="mailto:aquarim@gmail.com">aquarim@gmail.com</a></p>
+            <address>г. Москва, ул. Тверская, д. 8</address>
+            <p class="copy">&copy; 2018–2026 AQUARIM</p>
         </div>
     </footer>
 </body>
