@@ -61,11 +61,23 @@ input[type="submit"] {
   font-size: 1.6rem;
   font-weight: 600;
   transition: opacity 0.2s ease;
-  margin-bottom: 2rem;
 }
 
 button:hover {
   opacity: 0.9;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 header {
@@ -81,7 +93,7 @@ header .container {
 
 header nav ul {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 main {
@@ -97,21 +109,27 @@ section {
   background-image: linear-gradient(rgba(1, 24, 69, 0.85), rgba(1, 24, 69, 0.85)), url("../img/chef.jpg");
   background-size: cover;
   background-position: center;
-  padding: 4rem 0;
+  padding: 6rem 0;
   border-radius: 12px;
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
 }
 
 .hero-img {
   width: 250px;
   height: 320px;
   object-fit: contain;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 h1, h2, h3 {
   font-weight: 600;
   line-height: 1.2;
-  margin-bottom: 2rem;
 }
 
 h1 {
@@ -123,11 +141,16 @@ h2 {
 }
 
 p {
-  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+#about .container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .about-figure {
-  margin-top: 2rem;
   max-width: 500px;
 }
 
@@ -146,16 +169,22 @@ figcaption {
   margin-top: 0.8rem;
 }
 
-article {
+.dish-card {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
   background-color: var(--light-blue);
   border: 1px solid var(--white-50);
   border-radius: 12px;
   padding: 3rem;
-  margin-bottom: 2rem;
 }
 
 .dish-figure {
-  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
 }
 
 .dish-figure img,
@@ -167,13 +196,38 @@ article {
   border-radius: 50%;
 }
 
+.dish-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex-grow: 1;
+}
+
 .price {
   font-weight: 600;
   font-size: 2rem;
+}
+
+.promo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  background-color: var(--light-blue);
+  border: 1px solid var(--white-50);
+  border-radius: 12px;
+  padding: 3rem;
+  max-width: 600px;
 }
 
 footer {
   background-color: var(--bg-blue);
   padding: 4rem 0;
   text-align: center;
+}
+
+footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
